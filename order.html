@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>주문페이지</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c8340c828d.js" crossorigin="anonymous"></script>  
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer src="js/main.js"></script>
+    
+  </head>
+  <body>
+    <header class="order_header">
+      <a href="#"><img src="img/logo.png" alt="로고" ></a>
+      <button class="all_menu"><img src="img/hamberger.png" alt="전체메뉴"></button>
+    </header>
+    <main>
+      <nav id="navbar" class="navbar">
+        <ul class="nav-menu">
+          <li><a href="#main" data-scroll="main" class="order active">메인</a></li>
+          <li><a href="#sub_food" data-scroll="sub_food" class="order">안주류</a></li>
+          <li><a href="#alcohol" data-scroll="alcohol" class="order">주류</a></li>
+          <li><a href="#drink" data-scroll="drink" class="order">음료</a></li>
+          <li><a href="#etc" data-scroll="etc" class="order">기타</a></li>
+        </ul>
+      </nav>
+      <div class="main_content">
+      <section id="main">
+        <h2>메인</h2>
+        <div class="main_food">
+          <div class="1">
+            <a href="#" class="detail"><img src="img/신라면.png" alt="신라면">
+            <p>신라면 <span>3,500원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="1">
+            <a href="#" class="detail"><img src="img/짜파게티.png" alt="짜파게티">
+            <p>짜파게티 <span>4,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="1">
+            <a href="#" class="detail"><img src="img/피자.png" alt="피자">
+            <p>피자 <span>12,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+      </section>  
+      <section id="sub_food">
+        <h2>안주류</h2>
+        <div class="main_food">
+          <div class="2">
+            <a href="#" class="detail"><img src="img/감자튀김.png" alt="감자튀김">
+            <p>감자튀김 <span>5,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="2">
+            <a href="#" class="detail"><img src="img/버팔로윙.png" alt="치킨가라아게">
+            <p>치킨가라아게 <span>13,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="2">
+            <a href="#" class="detail"><img src="img/먹태.png" alt="먹태">
+            <p>먹태 <span>15,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="2">
+            <a href="#" class="detail"><img src="img/편육.png" alt="편육">
+            <p>편육 <span>10,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="2">
+            <a href="#" class="detail"><img src="img/핫바.png" alt="핫바">
+            <p>핫바 <span>3,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+        </div> 
+      </section>   
+      <section id="alcohol">
+        <h2>주류</h2>
+        <div class="main_food">
+          <div class="3" >
+            <a href="#"class="detail"><img src="img/참이슬.png" alt="참이슬">
+            <p>참이슬 <span>5,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="3" >
+            <a href="#"class="detail"><img src="img/처음처럼.png" alt="처음처럼">
+            <p>처음처럼 <span>5,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="3" >
+            <a href="#" class="detail"><img src="img/진로.png" alt="진로">
+            <p>진로 <span>5,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="3" >
+            <a href="#" class="detail"><img src="img/카스.png" alt="카스">
+            <p>카스(500ml캔) <span>4,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="3" >
+            <a href="#" class="detail"><img src="img/테라.png" alt="테라">
+            <p>테라(500ml캔) <span>4,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+        </div>
+      </section>
+      <section id="drink">
+        <h2>음료</h2>
+        <div class="main_food">
+          <div class="4">
+            <a href="#" class="detail"><img src="img/커피.png" alt="커피">
+            <p>웰컴드링크(아메리카노) <span>0원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="4">
+            <a href="#" class="detail"><img src="img/복티.png" alt="복티">
+            <p>웰컴드링크(아이스티) <span>0원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="4">
+            <a href="#" class="detail"><img src="img/오렌지주스.png" alt="주스">
+            <p>웰컴드링크(주스) <span>0원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="4">
+            <a href="#" class="detail"><img src="img/커피.png" alt="커피">
+            <p>아이스아메리카노 <span>2,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="4">
+            <a href="#" class="detail"><img src="img/복티.png" alt="복티">
+            <p>복숭아아이스티 <span>2,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="4">
+            <a href="#" class="detail"><img src="img/오렌지주스.png" alt="주스">
+            <p>주스(오렌지/자몽) <span>2,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="4">
+            <a href="#" class="detail"><img src="img/코카콜라.png" alt="콜라">
+            <p>콜라(355ml캔) <span>2,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="4">
+            <a href="#" class="detail"><img src="img/스프라이트.png" alt="사이다">
+            <p>사이다(355ml캔) <span>2,000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+        </div>  
+      </section>
+      <section id="etc">
+        <h2 class="final">기타</h2>
+        <div class="main_food">
+          <div class="5">
+            <a href="#"  class="detail"><img src="img/테라.png" alt="테라">
+            <p>단무지 <span>500원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="5">
+            <a href="#"  class="detail"><img src="img/테라.png" alt="테라">
+            <p>김치 <span>500원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+          <div class="5">
+            <a href="#"  class="detail"><img src="img/테라.png" alt="테라">
+            <p>계절메뉴(오뎅탕) <span>3000원</span></p>
+            </a>
+            <button class="cart_button">장바구니</button>
+          </div>
+        </div>  
+      </section>
+      </div>
+    </main>
+    <div class="detail_popup">
+      <img src="img/원본/1.jpg" alt="신라면">
+      <button class="detail_close"><span></span></button>
+      <div>
+        끓인 라면
+        <button class="cart_button">장바구니</button>
+      </div>
+    </div>
+    <div class="dark"></div>
+    <div class="gnb">
+      <div class="inner">
+        <div class="gnb_top">
+          <button class="detail_close"><span></span></button>
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div class="gnb_mid">
+          <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="event.html" class="event_page">이벤트</a></li>
+          </ul>
+        </div>
+        <div class="gnb_footer">
+          <ul>
+            <li><a href="#" class="gnb_call">
+              <span><i class="fa-regular fa-bell"></i>직원호출</span></a></li>
+            <li><a href="#" class="gnb_cart"><i class="fa-solid fa-cart-shopping"></i>장바구니</a></li>
+            <li><a href="#" class="gnb_orderlist"><i class="fa-regular fa-clipboard"></i>주문내역</a></li>
+          </ul>       
+          <div class="gnb_call_msg">호출 했습니다.<br/> 5초뒤에 사라집니다.</div>
+        </div>
+      </div>
+    </div>
+    <div class="cart_page">
+      <div class="cart_inner">
+        <button class="detail_close"><span></span></button>
+        <div class="cart_top"><h2>장바구니</h2></div>
+        <div class="cart_mid">    
+        </div>
+        <div class="cart_bot"><button class="order_button" type="submit">주문하기</button></div>    
+      </div>
+    </div>
+    <div class="orderList_page">
+      <div class="orderList_inner">
+        <button class="detail_close"><span></span></button>
+        <div class="list_top"><h2>주문내역</h2></div>
+        <div class="list_mid">
+          
+        </div>
+        <div class="list_bot"></div>
+      </div>
+    </div>
+    <div class="promote_page">
+      <div><img src="img/1.jpg" alt="1"></div>
+      <div><img src="img/2.jpg" alt="2"></div>
+      <div><img src="img/3.jpg" alt="3"></div>
+      <div><img src="img/4.jpg" alt="4"></div>
+      <div><img src="img/5.jpg" alt="5"></div>
+      <div><img src="img/6.jpg" alt="6"></div>
+      <div><img src="img/7.jpg" alt="7"></div>
+    </div>
+    <footer>
+      <div class="footer_wrap">
+        <ul>
+          <li><a href="#" class="call_button">
+            <span><i class="fa-regular fa-bell"></i>직원호출</span>
+          </a></li>
+          <li><a href="#" class="chauffeur"><i class="fa-solid fa-car"></i><span>대리운전</span></a></li>
+          <li><a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i><span class="cart_span">장바구니</span></a></li>
+          <li><a href="#" class="orderlist"><i class="fa-regular fa-clipboard"></i><span class="order_span">주문내역</span></a></li>
+        </ul>
+        <div class="call_msg">호출 했습니다. 5초뒤에 사라집니다.</div>
+        <div class="chauffeur_msg">카운터에 말씀해주세요.<br> 5초뒤에 사라집니다.</div>
+      </div>
+    </footer>
+  </body>
+</html>
+

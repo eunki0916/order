@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>주문페이지</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"></script>
+
+  <script defer src="js/main.js"></script>
+  <script src="https://kit.fontawesome.com/c8340c828d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="order_header">
+    <a href="order.html"><img src="img/logo.png" alt="로고"></a>
+    <button class="all_menu"><img src="img/hamberger.png" alt="전체메뉴"></button>
+  </header>
+  <main>
+    <nav class="event">
+      <ul class="">
+        <li><a href="#" class="btn_all active">전체 이벤트</a></li>
+        <li><a href="#" class="btn_ing ">진행중 이벤트</a></li>
+        <li><a href="#" class="btn_close">종료된 이벤트</a></li>
+      </ul>
+    </nav>
+    <section class="main_content">
+      <ul class="">
+        <li class="all ing">
+          <img src="img/golf.jpg" alt="홀인원">
+          <div class="event_hover">
+            <p class="title">
+              11월 홀인원 이벤트 금액
+              <strong>586,000원</strong>
+            <p class="type">*게임시작 전 참가 가능합니다.*</p>
+            </p>
+          </div>
+          <p class="content_title">11월 홀인원 이벤트</p>
+        </li>
+        <li class="all ing">
+          <img src="img/logo.png" alt="쿠폰">
+          <div class="event_hover">
+            <p class="title">
+              쿠폰 이벤트
+            <p class="type">10번 적립시 1게임 무료</p>
+            </p>
+          </div>
+          <p class="content_title">쿠폰 이벤트</p>
+        </li>
+        <li class="all close">
+          <img src="img/golf.jpg" alt="홀인원">
+          <div class="event_hover">
+            <p class="title finish">
+              10월 홀인원 이벤트 금액
+              <strong>526,000원</strong>
+            <p class="type">*게임시작 전 참가 가능합니다.*</p>
+            </p>
+          </div>
+          <p class="content_title">10월 홀인원 이벤트</p>
+        </li>
+        <li class="all close">
+          <img src="img/golf.jpg" alt="홀인원">
+          <div class="event_hover">
+            <p class="title finish">
+              09월 홀인원 이벤트 금액
+              <strong>456,000원</strong>
+            <p class="type">*게임시작 전 참가 가능합니다.*</p>
+            </p>
+          </div>
+          <p class="content_title">09월 홀인원 이벤트</p>
+        </li>
+        <li class="all close">
+          <img src="img/golf.jpg" alt="홀인원">
+          <div class="event_hover">
+            <p class="title finish">
+              08월 홀인원 이벤트 금액
+              <strong>626,000원</strong>
+            <p class="type">*게임시작 전 참가 가능합니다.*</p>
+            </p>
+          </div>
+          <p class="content_title">08월 홀인원 이벤트</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <div class="dark"></div>
+  <div class="gnb">
+    <div class="inner">
+      <div class="gnb_top">
+        <button class="detail_close"><span></span></button>
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div class="gnb_mid">
+        <ul>
+          <li><a href="#">회원가입</a></li>
+          <li><a href="#">로그인</a></li>
+          <li><a href="event.html" class="event_page">이벤트</a></li>
+        </ul>
+      </div>
+      <div class="gnb_footer">
+        <ul>
+          <li><a href="#"><i class="fa-solid fa-car"></i>대리운전</a></li>
+          <li><a href="#"><i class="fa-solid fa-cart-shopping"></i>장바구니</a></li>
+          <li><a href="#"><i class="fa-regular fa-clipboard"></i>주문내역</a></li>
+        </ul>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="cart_page">
+    <div class="cart_inner">
+      <button class="detail_close"><span></span></button>
+      <div class="cart_top">
+        <h2>장바구니</h2>
+      </div>
+      <div class="cart_mid"></div>
+      <div class="cart_bot"><button class="order_button" type="submit">주문하기</button></div>
+    </div>
+  </div>
+  <div class="orderList_page">
+    <div class="orderList_inner">
+      <button class="detail_close"><span></span></button>
+      <div class="list_top">
+        <h2>주문내역</h2>
+      </div>
+      <div class="list_mid"></div>
+      <div class="list_bot"></div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer_wrap">
+      <ul>
+        <li><a href="#" class="call">
+            <span><i class="fa-regular fa-bell"></i>직원호출</span>
+          </a></li>
+        <li><a href="#" class="chauffeur"><span><i class="fa-solid fa-car"></i>대리운전</span></a></li>
+        <li><a href="#" class="cart"><span><i class="fa-solid fa-cart-shopping"></i>장바구니</span></a></li>
+        <li><a href="#" class="orderlist"><span><i class="fa-regular fa-clipboard"></i>주문내역</span></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>
