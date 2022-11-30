@@ -659,25 +659,25 @@ footer {
     z-index: 10;
   }
   .page1 {
-    background: url(/img/1.jpg) no-repeat center/ cover;
+    background: url(./img/1.jpg) no-repeat center/ cover;
   }
   .page2 {
-    background: url(/img/2.jpg) no-repeat center center / cover;
+    background: url(./img/2.jpg) no-repeat center center / cover;
   }
   .page3 {
-    background: url(/img/3.jpg) no-repeat right center / cover;
+    background: url(./img/3.jpg) no-repeat right center / cover;
   }
   .page4 {
-    background: url(/img/5.jpg) no-repeat right center / cover;
+    background: url(./img/5.jpg) no-repeat right center / cover;
   }
   .page5 {
-    background: url(/img/7.jpg) no-repeat center center / cover;
+    background: url(./img/7.jpg) no-repeat center center / cover;
   }
   .page6 {
-    background: url(/img/4.jpg) no-repeat center center / cover;
+    background: url(./img/4.jpg) no-repeat center center / cover;
   }
   .page7 {
-    background: url(/img/6.jpg) no-repeat center center / cover;
+    background: url(./img/6.jpg) no-repeat center center / cover;
   }
 
   button {
@@ -718,7 +718,7 @@ footer {
   }
   .item {
     p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
   }
 }
