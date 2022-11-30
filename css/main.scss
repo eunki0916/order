@@ -476,9 +476,11 @@ main {
       justify-content: space-between;
       height: 60%;
       text-align: center;
+
       .item {
         margin-top: 100px;
         text-align: center;
+
         p {
           display: flex;
           justify-content: space-between;
@@ -546,6 +548,7 @@ main {
       .item {
         margin-top: 100px;
         text-align: center;
+
         p {
           display: flex;
           justify-content: space-between;
@@ -562,6 +565,7 @@ main {
       position: absolute;
       bottom: 10px;
       left: 50%;
+
       transform: translate(-50%);
     }
   }
@@ -716,9 +720,10 @@ footer {
   .event_hover {
     height: 83% !important;
   }
+  .list_bot {
+    font-size: 0.85rem !important;
+  }
   .item {
-    p {
-      font-size: 0.8rem;
-    }
+    width: 100vw;
   }
 }

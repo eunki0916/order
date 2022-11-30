@@ -107,7 +107,8 @@ orderList_page.onclick = () => {
   orderList_page.style.display = "none";
 };
 let orderClick = orderlist.addEventListener("click", function () {
-  // $(".promote_page").hide();
+  $(".promote_page").hide();
+
   orderList_page.style.display = "block";
   orderlist.style.color = "black";
 
@@ -303,7 +304,7 @@ $(".cart").click(function () {
 
 // 마우스, 키보드 움직임 없으면 30초마다 새로고침
 let time = new Date().getTime();
-$(document.body).bind("mousemove keypress", function (e) {
+$(document.body).bind("mousemove keypress", function () {
   time = new Date().getTime();
 });
 function refresh() {
