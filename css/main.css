@@ -655,4 +655,7 @@ footer .footer_wrap .chauffeur_msg::after {
   .event_hover {
     height: 83% !important;
   }
+  .item p {
+    font-size: 0.9rem;
+  }
 }/*# sourceMappingURL=main.css.map */
