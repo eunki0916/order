@@ -98,6 +98,8 @@ li {
 .admin_header a > img,
 .order_header a > img {
   width: 200px;
+  height: 90px;
+  transform: translate(-30px);
 }
 .admin_header button,
 .order_header button {
@@ -164,7 +166,7 @@ main .main_content ul li .event_hover {
   top: 0;
   right: 0;
   left: 0;
-  height: 86%;
+  height: 88%;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
   display: flex;
@@ -243,22 +245,14 @@ main .main_food div span {
   font-weight: bold;
   text-align: center;
 }
+main .main_food div .detail_msg {
+  display: none;
+}
 main #etc div {
   margin-bottom: 100px;
 }
 main .active {
   border-bottom: 5px solid #dd1313;
-}
-
-.cart_button {
-  cursor: pointer;
-  background-color: #dd1313;
-  border: none;
-  border-radius: 30px;
-  padding: 10px 0px;
-  color: #fff;
-  width: 150px;
-  margin: 10px auto;
 }
 
 .detail_popup {
@@ -276,11 +270,33 @@ main .active {
   z-index: 110;
 }
 .detail_popup img {
-  width: 200px;
+  width: 250px;
+  height: 200px;
   margin-top: 10px;
 }
+.detail_popup div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
 .detail_popup .cart_button {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 10px;
   width: 200px;
+}
+
+.cart_button {
+  cursor: pointer;
+  background-color: #dd1313;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 0px;
+  color: #fff;
+  width: 150px;
+  margin: 10px auto;
 }
 
 .detail_close {
@@ -291,14 +307,14 @@ main .active {
   outline: none;
   background: none;
 }
-.detail_close span {
+.detail_close a {
   display: block;
   width: 20px;
   height: 20px;
   position: relative;
   cursor: pointer;
 }
-.detail_close span::before {
+.detail_close a::before {
   content: "";
   position: absolute;
   width: 30px;
@@ -307,7 +323,7 @@ main .active {
   top: 15px;
   right: 10px;
 }
-.detail_close span::after {
+.detail_close a::after {
   content: "";
   position: absolute;
   height: 30px;
@@ -425,6 +441,8 @@ main .active {
 .cart_page .cart_inner .cart_mid .item p {
   display: flex;
   justify-content: space-between;
+  font-size: 0.9rem;
+  letter-spacing: -1px;
 }
 .cart_page .cart_inner .cart_mid .item p span {
   margin: 0 50px;
@@ -483,6 +501,8 @@ main .active {
 .orderList_page .orderList_inner .list_mid .item p {
   display: flex;
   justify-content: space-between;
+  font-size: 0.9rem;
+  letter-spacing: -1px;
 }
 .orderList_page .orderList_inner .list_mid .item p span {
   margin: 0 50px;
@@ -490,7 +510,8 @@ main .active {
 .orderList_page .orderList_inner .list_bot {
   position: absolute;
   bottom: 10px;
-  left: 30%;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 footer {
@@ -503,6 +524,9 @@ footer {
   background-color: #fff;
   border-top: 1px solid;
   z-index: 1;
+}
+footer .footer_wrap {
+  position: relative;
 }
 footer .footer_wrap ul {
   display: flex;
@@ -577,32 +601,29 @@ footer .footer_wrap .chauffeur_msg::after {
 }
 .promote_page div {
   width: 100%;
-  height: 100vh;
+  height: 89vh;
   z-index: 10;
 }
-.promote_page div img {
-  height: 100vh;
-}
 .promote_page .page1 {
-  background: url(/img/1.jpg) no-repeat center center/contain;
+  background: url(/img/1.jpg) no-repeat center/cover;
 }
 .promote_page .page2 {
-  background: url(/img/2.jpg) no-repeat center center/contain;
+  background: url(/img/2.jpg) no-repeat center center/cover;
 }
 .promote_page .page3 {
-  background: url(/img/3.jpg) no-repeat center center/contain;
+  background: url(/img/3.jpg) no-repeat right center/cover;
 }
 .promote_page .page4 {
-  background: url(/img/4.jpg) no-repeat center center/contain;
+  background: url(/img/5.jpg) no-repeat right center/cover;
 }
 .promote_page .page5 {
-  background: url(/img/5.jpg) no-repeat center center/contain;
+  background: url(/img/7.jpg) no-repeat center center/cover;
 }
 .promote_page .page6 {
-  background: url(/img/6.jpg) no-repeat center center/contain;
+  background: url(/img/4.jpg) no-repeat center center/cover;
 }
 .promote_page .page7 {
-  background: url(/img/7.jpg) no-repeat center center/contain;
+  background: url(/img/6.jpg) no-repeat center center/cover;
 }
 .promote_page button {
   display: none !important;
@@ -612,29 +633,26 @@ footer .footer_wrap .chauffeur_msg::after {
   content: "클릭하면 없어집니다.";
   position: absolute;
   top: 20px;
-  left: 20%;
-  transform: translate(50%);
+  left: 50%;
+  transform: translate(-50%);
   color: #fff;
+  z-index: 10;
 }
 
 @media (max-width: 450px) {
-  .gnb .inner {
-    height: 80%;
-  }
   main .main_food div p {
     font-size: 14px;
   }
   main .main_food div p span {
     font-size: 14px;
   }
-  .promote_page {
-    top: 0;
-  }
-  .promote_page img {
-    height: 80vh;
-  }
   .promote_page::after {
-    transform: none;
-    left: 25%;
+    transform: translate(-100%);
+  }
+  .chauffeur_msg {
+    right: 65px !important;
+  }
+  .event_hover {
+    height: 83% !important;
   }
 }/*# sourceMappingURL=main.css.map */

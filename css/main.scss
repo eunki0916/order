@@ -105,6 +105,8 @@ $main-color: #dd1313;
 
   a > img {
     width: 200px;
+    height: 90px;
+    transform: translate(-30px);
   }
 
   button {
@@ -177,7 +179,7 @@ main {
           top: 0;
           right: 0;
           left: 0;
-          height: 86%;
+          height: 88%;
           background-color: rgba(0, 0, 0, 0.7);
           text-align: center;
           display: flex;
@@ -269,6 +271,9 @@ main {
         font-weight: bold;
         text-align: center;
       }
+      .detail_msg {
+        display: none;
+      }
     }
   }
 
@@ -282,17 +287,6 @@ main {
     border-bottom: 5px solid $main-color;
   }
 }
-.cart_button {
-  cursor: pointer;
-  background-color: $main-color;
-  border: none;
-  border-radius: 30px;
-  padding: 10px 0px;
-  color: #fff;
-  width: 150px;
-  margin: 10px auto;
-}
-
 .detail_popup {
   display: none;
   position: fixed;
@@ -308,13 +302,34 @@ main {
   z-index: 110;
 
   img {
-    width: 200px;
+    width: 250px;
+    height: 200px;
     margin-top: 10px;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
   }
 
   .cart_button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
     width: 200px;
   }
+}
+.cart_button {
+  cursor: pointer;
+  background-color: $main-color;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 0px;
+  color: #fff;
+  width: 150px;
+  margin: 10px auto;
 }
 
 .detail_close {
@@ -325,7 +340,7 @@ main {
   outline: none;
   background: none;
 
-  span {
+  a {
     display: block;
     width: 20px;
     height: 20px;
@@ -333,7 +348,7 @@ main {
     cursor: pointer;
   }
 
-  span::before {
+  a::before {
     content: "";
     position: absolute;
     width: 30px;
@@ -343,7 +358,7 @@ main {
     right: 10px;
   }
 
-  span::after {
+  a::after {
     content: "";
     position: absolute;
     height: 30px;
@@ -467,6 +482,8 @@ main {
         p {
           display: flex;
           justify-content: space-between;
+          font-size: 0.9rem;
+          letter-spacing: -1px;
           span {
             margin: 0 50px;
           }
@@ -532,6 +549,8 @@ main {
         p {
           display: flex;
           justify-content: space-between;
+          font-size: 0.9rem;
+          letter-spacing: -1px;
           span {
             margin: 0 50px;
           }
@@ -542,7 +561,8 @@ main {
     .list_bot {
       position: absolute;
       bottom: 10px;
-      left: 30%;
+      left: 50%;
+      transform: translate(-50%);
     }
   }
 }
@@ -559,6 +579,7 @@ footer {
   z-index: 1;
 
   .footer_wrap {
+    position: relative;
     ul {
       display: flex;
       justify-content: space-between;
@@ -634,32 +655,29 @@ footer {
   z-index: 10;
   div {
     width: 100%;
-    height: 100vh;
+    height: 89vh;
     z-index: 10;
-    img {
-      height: 100vh;
-    }
   }
   .page1 {
-    background: url(/img/1.jpg) no-repeat center center / contain;
+    background: url(/img/1.jpg) no-repeat center/ cover;
   }
   .page2 {
-    background: url(/img/2.jpg) no-repeat center center / contain;
+    background: url(/img/2.jpg) no-repeat center center / cover;
   }
   .page3 {
-    background: url(/img/3.jpg) no-repeat center center / contain;
+    background: url(/img/3.jpg) no-repeat right center / cover;
   }
   .page4 {
-    background: url(/img/4.jpg) no-repeat center center / contain;
+    background: url(/img/5.jpg) no-repeat right center / cover;
   }
   .page5 {
-    background: url(/img/5.jpg) no-repeat center center / contain;
+    background: url(/img/7.jpg) no-repeat center center / cover;
   }
   .page6 {
-    background: url(/img/6.jpg) no-repeat center center / contain;
+    background: url(/img/4.jpg) no-repeat center center / cover;
   }
   .page7 {
-    background: url(/img/7.jpg) no-repeat center center / contain;
+    background: url(/img/6.jpg) no-repeat center center / cover;
   }
 
   button {
@@ -670,15 +688,13 @@ footer {
   content: "클릭하면 없어집니다.";
   position: absolute;
   top: 20px;
-  left: 20%;
-  transform: translate(50%);
+  left: 50%;
+  transform: translate(-50%);
   color: #fff;
+  z-index: 10;
 }
 
 @media (max-width: 450px) {
-  .gnb .inner {
-    height: 80%;
-  }
   main {
     .main_food {
       div {
@@ -691,14 +707,13 @@ footer {
       }
     }
   }
-  .promote_page {
-    top: 0;
-    img {
-      height: 80vh;
-    }
-  }
   .promote_page::after {
-    transform: none;
-    left: 25%;
+    transform: translate(-100%);
+  }
+  .chauffeur_msg {
+    right: 65px !important;
+  }
+  .event_hover {
+    height: 83% !important;
   }
 }

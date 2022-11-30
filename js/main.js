@@ -81,7 +81,7 @@ let order_span = document.querySelector(".order_span");
 let list_bot = document.querySelector(".list_bot");
 let close = document.querySelector(".detail_close");
 
-$('.cart').click(function(){
+$(".cart").click(function () {
   $(".cart_page").css("display", "block");
   $(".orderList_page").css("display", "none");
   $(".promote_page").hide();
@@ -91,7 +91,7 @@ $('.cart').click(function(){
 //   orderList_page.style.display = "none";
 //   // $(".promote_page").hide();
 // };
-$('.gnb_cart').click(function(){
+$(".gnb_cart").click(function () {
   $(".cart_page").css("display", "block");
   $(".orderList_page").css("display", "none");
 });
@@ -129,7 +129,7 @@ let orderClick = orderlist.addEventListener("click", function () {
     }
   }
 });
-$('.gnb_orderlist').click(function(){
+$(".gnb_orderlist").click(function () {
   $(".orderList_page").css("display", "block");
   setTimeout(() => {
     $(".orderList_page").css("display", "none");
@@ -250,7 +250,7 @@ let gnb_call_msg = document.querySelector(".gnb_call_msg");
 let chauffeur = document.querySelector(".chauffeur");
 let chauffeur_msg = document.querySelector(".chauffeur_msg");
 
-$('.call_button').click(function(){
+$(".call_button").click(function () {
   $(".call_msg").css("display", "block");
   $(".call_button").css("color", "black");
   setTimeout(() => {
@@ -268,7 +268,7 @@ $('.call_button').click(function(){
 //   }, 5000);
 //   // $(".promote_page").hide();
 // };
-$('.gnb_call').click(function(){
+$(".gnb_call").click(function () {
   $(".gnb_call_msg").css("display", "block");
   setTimeout(() => {
     $(".gnb_call_msg").css("display", "none");
@@ -348,8 +348,12 @@ const big_drink = [
   "img/원본/15.png",
   "img/원본/16.jpg",
   "img/원본/17.jpg",
-  "img/원본/18.jpg",
+  "img/원본/18.png",
+  "img/원본/19.jpg",
+  "img/원본/20.jpg",
+  "img/원본/21.jpg",
 ];
+const big_etc = ["img/원본/22.jpg", "img/원본/23.jpg", "img/원본/24.jpg"];
 
 // 썸네일
 const $thumbBtn1 = $(".1");
@@ -361,24 +365,44 @@ $thumbBtn1.click(function (e) {
   e.preventDefault();
   let num = $(this).index();
   $(".detail_popup").find("img").attr("src", big_main[num]);
+  let detail_p = $(this).find(".detail_p").html();
+  let detail_span = $(this).find(".detail_span").html();
+  $(".detail_popup p").html(detail_p);
+  $(".detail_popup span").html(detail_span);
 });
 $thumbBtn2.click(function (e) {
   e.preventDefault();
   let num = $(this).index();
   $(".detail_popup").find("img").attr("src", big_sub[num]);
+  let detail_p = $(this).find(".detail_p").html();
+  let detail_span = $(this).find(".detail_span").html();
+  $(".detail_popup p").html(detail_p);
+  $(".detail_popup span").html(detail_span);
 });
 $thumbBtn3.click(function (e) {
   e.preventDefault();
   let num = $(this).index();
   $(".detail_popup").find("img").attr("src", big_alcolhol[num]);
+  let detail_p = $(this).find(".detail_p").html();
+  let detail_span = $(this).find(".detail_span").html();
+  $(".detail_popup p").html(detail_p);
+  $(".detail_popup span").html(detail_span);
 });
 $thumbBtn4.click(function (e) {
   e.preventDefault();
   let num = $(this).index();
   $(".detail_popup").find("img").attr("src", big_drink[num]);
+  let detail_p = $(this).find(".detail_p").html();
+  let detail_span = $(this).find(".detail_span").html();
+  $(".detail_popup p").html(detail_p);
+  $(".detail_popup span").html(detail_span);
 });
 $thumbBtn5.click(function (e) {
   e.preventDefault();
   let num = $(this).index();
-  $(".detail_popup").find("img").attr("src", big_sub[num]);
+  $(".detail_popup").find("img").attr("src", big_etc[num]);
+  let detail_p = $(this).find(".detail_p").html();
+  let detail_span = $(this).find(".detail_span").html();
+  $(".detail_popup p").html(detail_p);
+  $(".detail_popup span").html(detail_span);
 });
