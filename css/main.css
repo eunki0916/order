@@ -606,25 +606,25 @@ footer .footer_wrap .chauffeur_msg::after {
   z-index: 10;
 }
 .promote_page .page1 {
-  background: url("order/img/1.png") no-repeat center/cover;
+  background: url(../img/1.png) no-repeat center/cover;
 }
 .promote_page .page2 {
-  background: url("order/img/1.png") no-repeat center center/cover;
+  background: url(../img/2.png) no-repeat center center/cover;
 }
 .promote_page .page3 {
-  background: url("order/img/1.png") no-repeat right center/cover;
+  background: url(../img/3.png) no-repeat right center/cover;
 }
 .promote_page .page4 {
-  background: url("order/img/1.png") no-repeat right center/cover;
+  background: url(../img/5.png) no-repeat right center/cover;
 }
 .promote_page .page5 {
-  background: url("order/img/1.png") no-repeat center center/cover;
+  background: url(../img/7.png) no-repeat center center/cover;
 }
 .promote_page .page6 {
-  background: url("order/img/1.png") no-repeat center center/cover;
+  background: url(../img/4.png) no-repeat center center/cover;
 }
 .promote_page .page7 {
-  background: url("order/img/1.png") no-repeat center center/cover;
+  background: url(../img/6.png) no-repeat center center/cover;
 }
 .promote_page button {
   display: none !important;
