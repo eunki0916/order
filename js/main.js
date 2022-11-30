@@ -60,6 +60,15 @@ $(function () {
   });
 });
 
+$(".cart_button").click(function () {
+  $(".cart_span").html(`장바구니<sup>+</sup>`);
+  $(".cart").css("color", "black");
+  setTimeout(() => {
+    $(".cart_span").html(`장바구니`);
+    $(".cart").css("color", "#8a8a8a");
+  }, 5000);
+});
+
 // 장바구니 ~ 주문내역
 
 let cart = document.querySelector(".cart");
@@ -71,15 +80,25 @@ let orderList_page = document.querySelector(".orderList_page");
 let order_span = document.querySelector(".order_span");
 let list_bot = document.querySelector(".list_bot");
 let close = document.querySelector(".detail_close");
-cart.onclick = function () {
-  cart_page.style.display = "block";
-  orderList_page.style.display = "none";
+
+$('.cart').click(function(){
+  $(".cart_page").css("display", "block");
+  $(".orderList_page").css("display", "none");
   $(".promote_page").hide();
-};
-gnb_cart.onclick = function () {
-  cart_page.style.display = "block";
-  orderList_page.style.display = "none";
-};
+});
+// cart.onclick = function () {
+//   cart_page.style.display = "block";
+//   orderList_page.style.display = "none";
+//   // $(".promote_page").hide();
+// };
+$('.gnb_cart').click(function(){
+  $(".cart_page").css("display", "block");
+  $(".orderList_page").css("display", "none");
+});
+// gnb_cart.onclick = function () {
+//   cart_page.style.display = "block";
+//   orderList_page.style.display = "none";
+// };
 
 cart_page.onclick = () => {
   cart_page.style.display = "none";
@@ -88,7 +107,7 @@ orderList_page.onclick = () => {
   orderList_page.style.display = "none";
 };
 let orderClick = orderlist.addEventListener("click", function () {
-  $(".promote_page").hide();
+  // $(".promote_page").hide();
   orderList_page.style.display = "block";
   orderlist.style.color = "black";
 
@@ -110,12 +129,11 @@ let orderClick = orderlist.addEventListener("click", function () {
     }
   }
 });
-gnb_orderlist.onclick = () => {
-  orderList_page.style.display = "block";
-  let disappear = setTimeout(() => {
-    orderList_page.style.display = "none";
+$('.gnb_orderlist').click(function(){
+  $(".orderList_page").css("display", "block");
+  setTimeout(() => {
+    $(".orderList_page").css("display", "none");
   }, 15000);
-  disappear;
   let timer = setInterval(() => {
     remain_time();
   }, 1000);
@@ -127,7 +145,25 @@ gnb_orderlist.onclick = () => {
       clearInterval(timer);
     }
   }
-};
+});
+// gnb_orderlist.onclick = () => {
+//   orderList_page.style.display = "block";
+//   let disappear = setTimeout(() => {
+//     orderList_page.style.display = "none";
+//   }, 15000);
+//   disappear;
+//   let timer = setInterval(() => {
+//     remain_time();
+//   }, 1000);
+//   let setTime = 15;
+//   function remain_time() {
+//     list_bot.innerHTML = `${setTime}초 뒤에 창이 닫힙니다.`;
+//     setTime--;
+//     if (setTime == 0) {
+//       clearInterval(timer);
+//     }
+//   }
+// };
 const xhr = new XMLHttpRequest();
 xhr.open("get", "data.json", true);
 xhr.send(null);
@@ -181,8 +217,8 @@ xhr.onload = function () {
 };
 
 // 이벤트 페이지
-let $btn = $(".event li a");
-$btn.click(function () {
+let $btn = $(".event ul li a");
+$btn.click(function (e) {
   $btn.removeClass("active");
   $(this).addClass("active");
 });
@@ -207,28 +243,43 @@ $(".btn_close").click(function () {
 });
 
 // 직원호출 대리운전
-let call = document.querySelector(".call_button");
+let call_button = document.querySelector(".call_button");
 let call_msg = document.querySelector(".call_msg");
 let gnb_call = document.querySelector(".gnb_call");
 let gnb_call_msg = document.querySelector(".gnb_call_msg");
 let chauffeur = document.querySelector(".chauffeur");
 let chauffeur_msg = document.querySelector(".chauffeur_msg");
 
-call.onclick = function () {
-  call_msg.style.display = "block";
-  call.style.color = "black";
+$('.call_button').click(function(){
+  $(".call_msg").css("display", "block");
+  $(".call_button").css("color", "black");
   setTimeout(() => {
-    call_msg.style.display = "none";
-    call.style.color = "#8a8a8a";
+    $(".call_msg").css("display", "none");
+    $(".call").css("color", "#8a8a8a");
   }, 5000);
   $(".promote_page").hide();
-};
-gnb_call.onclick = function () {
-  gnb_call_msg.style.display = "block";
+});
+// call.onclick = function () {
+//   call_msg.style.display = "block";
+//   call.style.color = "black";
+//   setTimeout(() => {
+//     call_msg.style.display = "none";
+//     call.style.color = "#8a8a8a";
+//   }, 5000);
+//   // $(".promote_page").hide();
+// };
+$('.gnb_call').click(function(){
+  $(".gnb_call_msg").css("display", "block");
   setTimeout(() => {
-    gnb_call_msg.style.display = "none";
+    $(".gnb_call_msg").css("display", "none");
   }, 5000);
-};
+});
+// gnb_call.onclick = function () {
+//   gnb_call_msg.style.display = "block";
+//   setTimeout(() => {
+//     gnb_call_msg.style.display = "none";
+//   }, 5000);
+// };
 chauffeur.onclick = function () {
   chauffeur_msg.style.display = "block";
   chauffeur.style.color = "black";
@@ -236,7 +287,7 @@ chauffeur.onclick = function () {
     chauffeur_msg.style.display = "none";
     chauffeur.style.color = "#8a8a8a";
   }, 5000);
-  $(".promote_page").hide();
+  // $(".promote_page").hide();
 };
 //
 $(".cart").click(function () {
