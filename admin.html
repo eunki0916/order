@@ -28,18 +28,30 @@
     <script defer src="js/main.js"></script>
   </head>
   <body>
+    <div class="admin_content">
     <header class="admin_header">
       <a href="#"><img src="img/logo2.png" alt="로고" /></a>
-      <button><img src="img/hamberger.png" alt="전체메뉴" /></button>
     </header>
     <main>
-      <div class="orderList_page">
-        <div class="orderList_inner">
-          <button class="detail_close"><span></span></button>
-          <div class="list_top"><h2>주문내역</h2></div>
-          <div class="list_mid"></div>
-          <div class="list_bot"></div>
+      <div class="admin_button">
+        <a href="#all_order">모든 주문</a>
+        <a href="#notCheck_order">미확인 주문</a>
+        <a href="#check_order">확인 주문</a>
+      </div>
+      <section id="all_order">
+        <div class="list_top">
+          <h2>모든 주문</h2>
+          <div class="list_table">
+            <span>방</span><span>상태</span><span>주문목록</span><span>금액</span>
+          </div>
         </div>
+        <div class="list_mid">
+          
+        </div>
+        <div class="list_bot"></div>
+      </section>
+      <section id="notCheck_order"></section>
+      <section id="check_order"></section>
       </div>
     </main>
   </body>

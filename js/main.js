@@ -69,102 +69,6 @@ $(".cart_button").click(function () {
   }, 5000);
 });
 
-// 장바구니 ~ 주문내역
-
-let cart = document.querySelector(".cart");
-let gnb_cart = document.querySelector(".gnb_cart");
-let orderlist = document.querySelector(".orderlist");
-let gnb_orderlist = document.querySelector(".gnb_orderlist");
-let cart_page = document.querySelector(".cart_page");
-let orderList_page = document.querySelector(".orderList_page");
-let order_span = document.querySelector(".order_span");
-let list_bot = document.querySelector(".list_bot");
-let close = document.querySelector(".detail_close");
-
-$(".cart").click(function () {
-  $(".cart_page").css("display", "block");
-  $(".orderList_page").css("display", "none");
-  $(".promote_page").hide();
-});
-// cart.onclick = function () {
-//   cart_page.style.display = "block";
-//   orderList_page.style.display = "none";
-//   // $(".promote_page").hide();
-// };
-$(".gnb_cart").click(function () {
-  $(".cart_page").css("display", "block");
-  $(".orderList_page").css("display", "none");
-});
-// gnb_cart.onclick = function () {
-//   cart_page.style.display = "block";
-//   orderList_page.style.display = "none";
-// };
-
-cart_page.onclick = () => {
-  cart_page.style.display = "none";
-};
-orderList_page.onclick = () => {
-  orderList_page.style.display = "none";
-};
-let orderClick = orderlist.addEventListener("click", function () {
-  $(".promote_page").hide();
-
-  orderList_page.style.display = "block";
-  orderlist.style.color = "black";
-
-  setTimeout(() => {
-    orderlist.style.color = "#8a8a8a";
-  }, 5000);
-  setTimeout(() => {
-    orderList_page.style.display = "none";
-  }, 15000);
-  let timer = setInterval(() => {
-    remain_time();
-  }, 1000);
-  let setTime = 15;
-  function remain_time() {
-    list_bot.innerText = `${setTime}초 뒤에 창이 닫힙니다.`;
-    setTime--;
-    if (setTime == 0) {
-      clearInterval(timer);
-    }
-  }
-});
-$(".gnb_orderlist").click(function () {
-  $(".orderList_page").css("display", "block");
-  setTimeout(() => {
-    $(".orderList_page").css("display", "none");
-  }, 15000);
-  let timer = setInterval(() => {
-    remain_time();
-  }, 1000);
-  let setTime = 15;
-  function remain_time() {
-    list_bot.innerHTML = `${setTime}초 뒤에 창이 닫힙니다.`;
-    setTime--;
-    if (setTime == 0) {
-      clearInterval(timer);
-    }
-  }
-});
-// gnb_orderlist.onclick = () => {
-//   orderList_page.style.display = "block";
-//   let disappear = setTimeout(() => {
-//     orderList_page.style.display = "none";
-//   }, 15000);
-//   disappear;
-//   let timer = setInterval(() => {
-//     remain_time();
-//   }, 1000);
-//   let setTime = 15;
-//   function remain_time() {
-//     list_bot.innerHTML = `${setTime}초 뒤에 창이 닫힙니다.`;
-//     setTime--;
-//     if (setTime == 0) {
-//       clearInterval(timer);
-//     }
-//   }
-// };
 const xhr = new XMLHttpRequest();
 xhr.open("get", "data.json", true);
 xhr.send(null);
@@ -203,6 +107,13 @@ xhr.onload = function () {
     arr.forEach(function (el) {
       sum += el;
     });
+    $("#all_order").find(".list_mid").html(newContent);
+    $(".list_mid")
+      .find("p")
+      .click(function () {
+        $(this).css("text-decoration", "line-through");
+        $().html(``);
+      });
     newContent += `<div class="price">`;
     newContent += `<p>
       합계 : <span>${sum}원</span>
@@ -210,12 +121,124 @@ xhr.onload = function () {
     newContent += `</div>`;
 
     document.querySelector(".cart_mid").innerHTML = newContent;
-
     $(".order_button").click(function () {
       document.querySelector(".list_mid").innerHTML = newContent;
     });
   }
 };
+
+// 장바구니 ~ 주문내역
+
+let cart = document.querySelector(".cart");
+let gnb_cart = document.querySelector(".gnb_cart");
+let orderlist = document.querySelector(".orderlist");
+let gnb_orderlist = document.querySelector(".gnb_orderlist");
+let cart_page = document.querySelector(".cart_page");
+let orderList_page = document.querySelector(".orderList_page");
+let order_span = document.querySelector(".order_span");
+let list_bot = document.querySelector(".list_bot");
+let close = document.querySelector(".detail_close");
+
+$(".cart").click(function () {
+  $(".cart_page").css("display", "block");
+  $(".orderList_page").css("display", "none");
+  $(".promote_page").hide();
+});
+// cart.onclick = function () {
+//   cart_page.style.display = "block";
+//   orderList_page.style.display = "none";
+//   // $(".promote_page").hide();
+// };
+$(".gnb_cart").click(function () {
+  $(".cart_page").css("display", "block");
+  $(".orderList_page").css("display", "none");
+});
+// gnb_cart.onclick = function () {
+//   cart_page.style.display = "block";
+//   orderList_page.style.display = "none";
+// };
+
+// cart_page.onclick = function () {
+//   cart_page.style.display = "none";
+// };
+$(".cart_page").click(function () {
+  $(".cart_page").css("display", "none");
+});
+$(".orderList_page").click(function () {
+  $(".orderList_page").css("display", "none");
+});
+// orderList_page.onclick = () => {
+//   orderList_page.style.display = "none";
+// };
+let orderClick = orderlist.addEventListener(
+  "click",
+  function () {
+    $(".promote_page").hide();
+
+    orderList_page.style.display = "block";
+    orderlist.style.color = "black";
+
+    setTimeout(() => {
+      orderlist.style.color = "#8a8a8a";
+    }, 5000);
+    setTimeout(() => {
+      orderList_page.style.display = "none";
+    }, 15000);
+    let timer = setInterval(() => {
+      remain_time();
+    }, 1000);
+    let setTime = 15;
+    function remain_time() {
+      list_bot.innerText = `${setTime}초 뒤에 창이 닫힙니다.`;
+      setTime--;
+      if (setTime == 0) {
+        clearInterval(timer);
+      }
+    }
+    // 이벤트제거
+    // if (orderlist.removeEventListener("click", arguments.callee)) {
+    //   window.location.reload(true);
+    // }
+    // 이벤트 한번만
+  },
+  // { once: true },
+);
+
+$(".gnb_orderlist").click(function () {
+  $(".orderList_page").css("display", "block");
+  setTimeout(() => {
+    $(".orderList_page").css("display", "none");
+  }, 15000);
+  let timer = setInterval(() => {
+    remain_time();
+  }, 1000);
+  let setTime = 15;
+  function remain_time() {
+    list_bot.innerHTML = `${setTime}초 뒤에 창이 닫힙니다.`;
+    setTime--;
+    if (setTime == 0) {
+      clearInterval(timer);
+    }
+  }
+});
+// gnb_orderlist.onclick = () => {
+//   orderList_page.style.display = "block";
+//   let disappear = setTimeout(() => {
+//     orderList_page.style.display = "none";
+//   }, 15000);
+//   disappear;
+//   let timer = setInterval(() => {
+//     remain_time();
+//   }, 1000);
+//   let setTime = 15;
+//   function remain_time() {
+//     list_bot.innerHTML = `${setTime}초 뒤에 창이 닫힙니다.`;
+//     setTime--;
+//     if (setTime == 0) {
+//       clearInterval(timer);
+//     }
+//   }
+// };
 
 // 이벤트 페이지
 let $btn = $(".event ul li a");
@@ -281,15 +304,24 @@ $(".gnb_call").click(function () {
 //     gnb_call_msg.style.display = "none";
 //   }, 5000);
 // };
-chauffeur.onclick = function () {
-  chauffeur_msg.style.display = "block";
-  chauffeur.style.color = "black";
+$(".chauffeur").click(function () {
+  $(".chauffeur_msg").css("display", "block");
+  $(".chauffeur").css("display", "block");
   setTimeout(() => {
-    chauffeur_msg.style.display = "none";
-    chauffeur.style.color = "#8a8a8a";
+    $(".chauffeur_msg").css("display", "none");
+    $(".chauffeur").css("color", "#8a8a8a");
   }, 5000);
-  // $(".promote_page").hide();
-};
+  $(".promote_page").hide();
+});
+// chauffeur.onclick = function () {
+//   chauffeur_msg.style.display = "block";
+//   chauffeur.style.color = "black";
+
+//   setTimeout(() => {
+//     chauffeur_msg.style.display = "none";
+//     chauffeur.style.color = "#8a8a8a";
+//   }, 5000);
+// };
 //
 $(".cart").click(function () {
   $(".detail_popup").hide();

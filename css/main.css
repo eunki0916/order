@@ -1,8 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: "LINESeedKR-Bd";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2")
-    format("woff2");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
@@ -74,7 +73,7 @@ li {
 }
 .main_wrap form .login {
   width: 100%;
-  padding: 5px 20px;
+  padding: 10px 20px;
   margin: 10px 0;
   background-color: #dd1313;
   cursor: pointer;
@@ -90,7 +89,7 @@ li {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  height: 80px;
+  height: 90px;
   min-width: 350px;
   max-width: 560px;
   width: 100%;
@@ -442,7 +441,7 @@ main .active {
 .cart_page .cart_inner .cart_mid .item p {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   letter-spacing: -1px;
 }
 .cart_page .cart_inner .cart_mid .item p span {
@@ -502,7 +501,7 @@ main .active {
 .orderList_page .orderList_inner .list_mid .item p {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-size: 1.5rem;
   letter-spacing: -1px;
 }
 .orderList_page .orderList_inner .list_mid .item p span {
@@ -662,4 +661,82 @@ footer .footer_wrap .chauffeur_msg::after {
   .item {
     width: 100vw;
   }
-} /*# sourceMappingURL=main.css.map */
+  .item p {
+    font-size: 0.9rem !important;
+  }
+}
+.admin_content {
+  position: absolute;
+  top: 100px;
+  min-width: 350px;
+  max-width: 560px;
+  width: 100%;
+}
+.admin_content .admin_button {
+  display: flex;
+  justify-content: space-between;
+}
+.admin_content .admin_button a {
+  background: #dd1313;
+  padding: 10px 20px;
+  letter-spacing: -2px;
+  border-radius: 20px;
+  margin: 0 20px;
+  color: white;
+}
+.admin_content section {
+  margin: 50px auto;
+  width: 90%;
+  height: 500px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.admin_content #all_order .list_top {
+  width: 100%;
+}
+.admin_content #all_order .list_top h2 {
+  margin: 10px;
+}
+.admin_content #all_order .list_top .list_table {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 0 0 10px 0;
+}
+.admin_content #all_order .list_top .list_table span {
+  margin: 0 10px;
+}
+.admin_content #all_order .list_mid {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.admin_content #all_order .list_mid .item {
+  margin-top: 10px;
+  width: 100%;
+}
+.admin_content #all_order .list_mid .item p {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.9rem;
+  letter-spacing: -1px;
+}
+.admin_content #all_order .list_mid .item p span {
+  margin-right: 5px;
+}
+.admin_content #all_order .list_mid .item p span:nth-child(1) {
+  width: 100px;
+  margin-right: 40px;
+  text-align: center;
+}
+.admin_content #all_order .list_bot {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%);
+}/*# sourceMappingURL=main.css.map */
